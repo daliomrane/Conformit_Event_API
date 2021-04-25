@@ -20,7 +20,7 @@ namespace TestProgrammationConformit.Infrastructures
         {
             modelBuilder.Entity<Evenement>()
             .HasMany(c => c.Commentaires)
-            .WithOne(e => e.ParentEvent).WillCascadeOnDelete(true);
+            .WithOne(e => e.ParentEvent).OnDelete(DeleteBehavior.Cascade);
         }
 
     }
